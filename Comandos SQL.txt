@@ -1,0 +1,56 @@
+  
+ COMANDOS DE SQL SERVER 
+ 
+ Crear Data Base ----- CREATE DATA BASE + NOMBRE;
+ 
+ Crear Tabla	 ----- CREATE TABLA + NOMBRE ( nombreCambo + tipoDato(30),nombreCambo + tipoDato(30),nombreCambo + tipoDato(30));
+ 
+ Insertar Datos  ----- INSERT INTO + NOMBRE TABLA + (CAMPO,CAMPO,CAMPO) VALUES (DATO, 'DATO');
+ 
+ Eliminar Tabla  ----- DROP + NOMBRE Tabla;
+ 
+ Visualizar Tabla ---- SELECT * FRONT + NombreTabla (toda la tabla)
+ 
+ Visualizar algún Campo de la tabla ----- SELECT NombreCampo,NombreCampo, FRONT + NombreTabla
+ 
+ Visualizar algún Dato especifico de la tabla ----- SELECT NombreCampo,NombreCampo, FRONT + NombreTabla WHERE NombreCampo= '';
+ 
+ Condicional para crear o borrar una Tabla ----- IF OBJECT_ID('NombreTabla') is not null DROP TABLE + NombreTabla;
+ 
+ Visualizar Tablas Existentes en Base de Datos  ---- exec tables @table_owner='dbo';
+ 
+ Visualizar la estructura de la Tabla -----  exec sp_columns + NombreTabla;
+ 
+ Para dividir en sublotes las consultas ----- GO  sin punto y coma 
+ 
+ Los operadores relacionales son los siguientes:
+
+												=	igual
+												<>	distinto
+												>	mayor
+												<	menor
+												>=	mayor o igual
+												<=	menor o igual
+ 
+SELECT precio FROM articulos WHERE precio >= 400;
+
+SELECT codigo, nombre FROM articulos WHERE cantidad <30;
+
+SELECT nombre, descripcion FROM  articulos WHERE precio <> 100
+ 
+ 
+Para eliminar registros en especifico de una tabla ---- DELETE FROM + NombreTabla WHERE NombreCampo = 'DATO';
+				
+Para eliminar todos los registros de una tabla     ----  DELETE FROM + NombreTabla  
+ 
+Actualizar (Modificar) los registros de una tabla ---- UPDATE + NombreTabla SET + NombreCampo + NuevoValor ;
+
+Actualizar (Modificar) un solo registro de la tabla  ----- UPDATE + NombreTabla SET + NombreCampo + NuevoValor + WHERE + NombreCampo='?';
+
+Comentarios ---- /*  */  o también --
+
+Null significa que el dato desconocido o valor inexistente, pero no es igual a valor '0' ---- DEFINICION DEL CAMPO + NULL O NOT NULL, también se puede insertar
+																							  como Null 
+																							  
+
+Primary key para que un campo no se repita ----  NombreCampo + TipoDato + NOT NULL + Primary KEY
