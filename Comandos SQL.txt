@@ -61,5 +61,5 @@ Función ident_seed() para saber el valor de inicio del campo identity  ---- SEL
 
 Función  ident_incr('NombreTabla') retorna el valor de incremento del campo;
 
-Para borrar todos los registros de una tabla sin borrar la tabla ----- TRUNCAE TABLE + NombreTabla;
+Para borrar todos los registros de una tabla sin borrar la tabla ----- TRUNCATE TABLE + NombreTabla;
 
