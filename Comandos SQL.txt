@@ -54,3 +54,12 @@ Null significa que el dato desconocido o valor inexistente, pero no es igual a v
 																							  
 
 Primary key para que un campo no se repita ----  NombreCampo + TipoDato + NOT NULL + Primary KEY
+
+Identity para indicar el valor de inicio de la secuencia y el incremento --- NombreCampo + TipoDato + Primary Key + Identity(inicio,incremento)
+
+Función ident_seed() para saber el valor de inicio del campo identity  ---- SELECT indent_seed('NombreTabla');
+
+Función  ident_incr('NombreTabla') retorna el valor de incremento del campo;
+
+Para borrar todos los registros de una tabla sin borrar la tabla ----- TRUNCAE TABLE + NombreTabla;
+
