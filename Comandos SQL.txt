@@ -89,3 +89,10 @@ Otros Tipos de datos------ TEXTO --->  char
 												smalldatetime	|---> regla general MES-DIA-AÑO(mdy), pero se puede setear con 
 																	  set dateformat dmy
 												
+Insertar datos sin enunciar los campos  y sin todos los Values ---> -- Si ingresamos valores para todos los campos, podemos omitir la lista de campos:
+																			insert into libros
+																			  values ('Uno','Richard Bach','Planeta');
+
+																	-- Podemos ingresar valores para algunos de los campos:
+																			insert into libros (titulo, autor)
+																			  values ('El aleph','Borges');
