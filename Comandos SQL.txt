@@ -96,3 +96,7 @@ Insertar datos sin enunciar los campos  y sin todos los Values ---> -- Si ingres
 																	-- Podemos ingresar valores para algunos de los campos:
 																			insert into libros (titulo, autor)
 																			  values ('El aleph','Borges');
+
+Declarar un campo con un valor por defecto ---> CREATE TABLA NombreTabla (nombreCampo + tipoDato () + not null + default 'DatoPermanente' o default 0);
+
+												INSERT INTO NombreTabla (campos) values ('El gato con botas',default,default,100);
