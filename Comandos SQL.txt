@@ -63,3 +63,29 @@ Función  ident_incr('NombreTabla') retorna el valor de incremento del campo;
 
 Para borrar todos los registros de una tabla sin borrar la tabla ----- TRUNCATE TABLE + NombreTabla;
 
+Otros Tipos de datos------ TEXTO --->  char 
+									   nchar
+									   varchar
+									   nvarchar
+									   text
+									   ntext
+									   
+						    NÚMEROS ---> tinyint	|
+										 smallint	|----> Para almacenar números enteros
+										 bigint		|
+										 
+							
+										 numeric |
+										 decimal |--->  Para decimales con presición
+										 
+										 float |
+											   |---> Para decimales aproximado 	
+										 real  |
+
+										money		|
+										smallmoney	|---> Para valores monetarios 
+										
+							FECHAS Y HORAS ---> datetime		|
+												smalldatetime	|---> regla general MES-DIA-AÑO(mdy), pero se puede setear con 
+																	  set dateformat dmy
+												
