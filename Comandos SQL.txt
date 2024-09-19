@@ -100,3 +100,21 @@ Insertar datos sin enunciar los campos  y sin todos los Values ---> -- Si ingres
 Declarar un campo con un valor por defecto ---> CREATE TABLA NombreTabla (nombreCampo + tipoDato () + not null + default 'DatoPermanente' o default 0);
 
 												INSERT INTO NombreTabla (campos) values ('El gato con botas',default,default,100);
+												
+												
+
+Columnas calculadas  ---> Se puede utilizar tanto en ingresar o como en actualizar los campos 
+							Los operadores utilizados son los aritmeticos
+								* multiplicar 
+								/ Dividir
+								% módulo
+								+ suma
+								- Resta
+							
+							SELECT NombreCampo + NombreCampo + NombreCampo FROM NombreTabla; (se crea un campo nuevo que muestra el resultado)
+							SELECT NombreCampo * NombreCampo FROM NombreTabla; (se crea un campo nuevo que muestra el resultado)
+							
+							UPDATE NombreCampo SET NombreCampo=nombreCampo -(operacion con el nombreCampo);
+							
+							También se puede concatenar los campos	
+									SELECT NombreCampo+' - '+NombreCampo+' - '+NombreCampo FROM NombreTabla;
