@@ -118,3 +118,45 @@ Columnas calculadas  ---> Se puede utilizar tanto en ingresar o como en actualiz
 							
 							También se puede concatenar los campos	
 									SELECT NombreCampo+' - '+NombreCampo+' - '+NombreCampo FROM NombreTabla;
+									
+Alias 'AS' --->  Es opcional en algunos casos, en otros es obligatorio, consiste en que se puede otorgar un nombre temporal a un campo, para	
+				 mostrar el resultado de una operación.
+				 
+				 SELECT + NombreCampo AS 'NuevoNombre' + FROM + NombreTabla;
+				 
+Funciones ---> Las funciones de SQL  no se pueden modificar y se clasifican en:
+
+						--De Agregado= Operan con varios valores y devuelven un solo valor= COUNT - SUM - MIN Y MAX
+						--Escalares= Toman un sólo valor y devuelven un sólo valor, ejemplo @@VERSION (Devulve fecha y version del SQL); 
+						--De conjunto de filas  
+						
+Funciones de Cadenas --> substring(cadena, inicio,longitud), devuelve una parte de la cadena --- SELECT substrig('Buenas Tardes',8,6) = "tardes";
+
+						 str(numero,longitud,cantidaddecimales), convierte números a caracteres  --- SELECT str(123.456,7,3) = '-123.46' ;
+						 
+						 stuff(cadena1,inicio,cantidad,cadena2), inserta la cadena enviada como cuarto argumento, en la posición indicada en el segundo argumento 
+						 
+								select stuff('abcde',3,2,'opqrs') = retorna "abopqrse". Es decir, coloca en la posición 2 la cadena "opqrs" y reemplaza 2 caracteres de la primer cadena. ;
+						
+                         len(cadena)retorna la longitud de la cadena enviada como argumento.
+
+						 char(x) retorna un caracter de código ASCII del entero enviado como argumento, ejemplo select char(65) retorna "A"
+						 
+						 left(cadena, longitud) retorna la cantidad (longitud) de caracteres de la cadena comenzado desde la izquierda primer caracter
+						 
+						 right (cadena,longitud) retorna la cantidad (longitud) de caracteres de la cadena comenzando desde la derecha, último caracter
+						 
+						 lower(cadena) retorna la cadena con todos sus carecteres en minuscula.
+						 
+						 upper(cadena) retorna la cadena con todos sus caracteres en mayúsculas.
+						 
+						 otras funciones 
+											space
+											replicate
+											charindex
+											patindex
+											reverse
+											replace
+											rtrim
+											ltrim
+Funciones Matematicas ---						
