@@ -159,4 +159,59 @@ Funciones de Cadenas --> substring(cadena, inicio,longitud), devuelve una parte 
 											replace
 											rtrim
 											ltrim
-Funciones Matematicas ---						
+Funciones Matematicas --- Funciones:
+									---Para el valor absoluto y redondear hacia arriba 
+													SELECT ABS(-20); nos arroja 20
+													
+									---Para el valor absoluto y redondear hacia arriba 
+													SELECT CEILING(12.34); nos arroja 13
+													
+									---Para el valor absoluto y redondear hacia abajo
+													SELECT FLOOR(12.34); retorna 12
+													
+									---Para retornar el valor de "X" elevado a potencia
+													SELECT POWER(2,3); retorna 8
+													
+									---Retorna un número redondeado a la longitud especificada
+													SELECT ROUND(123.456,1); retorna 123.400 redondea desde el primer decimal.
+									---Retorna positivo o negativo según el argumento
+													SELECT SIGN();
+									---Retorna el cuadrado del argumento
+													SELECT SQUARE(3); Retorna 9.
+									---Retorna la raiz cuadrada del valor enviado como argumento
+													SELECT SRQT();
+													
+Funciones Fechas y horas --- Funciones:
+									---Para retornar fecha y hora actuales
+													SELECT GETDATE();
+									
+									---Para fecha,año,trimestre,día,hora
+													SELECT DATEPART(month,getdate()); retorna el número de mes actuales
+													
+													SELECT DATENAME(day,getdate()); retorna el día actual;
+													
+													SELECT DATEADD(partedelafecha,numero,fecha); select dateadd(day,3,'1980/11/02'); retorna el día actual;
+													
+									---DATEDIFF	--select datediff (day,'2005/10/28','2006/10/28'); retorna 365 (días).
+
+												  select datediff(month,'2005/10/28','2006/11/29'); retorna 13 (meses).
+												  
+									---- day(fecha): retorna el día de la fecha especificada. Ejemplo:
+
+												 select day(getdate());
+												- month(fecha): retorna el mes de la fecha especificada. Ejemplo:
+
+												 select month(getdate());
+												- year(fecha): retorna el año de la fecha especificada. Ejemplo:
+
+												 select year(getdate());
+												 
+Ordenar Registros---ORDER BY ---> Es para ordenar los campos 
+								  puede ser de manera descendente con DESC
+								  puede ser de manera ascendete con ASC
+								  
+								   select * from NOMBRETABLA order by CAMPO;
+								   
+								   select titulo,autor,precio from libros order by 3; --En este caso lo ordena por precio
+								   
+								   select * from libros order by titulo asc, editorial desc;
