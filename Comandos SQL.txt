@@ -215,3 +215,18 @@ Ordenar Registros---ORDER BY ---> Es para ordenar los campos
 								   select titulo,autor,precio from libros order by 3; --En este caso lo ordena por precio
 								   
 								   select * from libros order by titulo asc, editorial desc;
+						
+OPERADORES LOGICOS AND - OR -NOT - () --->  Ejemplos practicos
+
+											Nota= los () se usan para encerrar condiciones, para que se evalúen como una sola expresión y la prioridad
+
+											Con 'AND' que significa "y" ---> SELECT * FROM libros WHERE (autor='Borges') AND (precio<=20);
+											
+											Con 'OR' que significa "O" ---> SELECT * FROM libros WHERE autor='Borges' OR editorial='Planeta';
+											
+											Con 'NOT' que es un no excluyente ---> SELECT * FROM libros NOT editorial='Planeta';
+											
+											Con () ----> SELECT * FROM libros WHERE (autor='Borges') OR (editorial='Paidos' AND precio<20);
+														 SELECT * FROM libros WHERE (autor='Borges' or editarial='Paidos') AND (precio<20);
+											
+											
